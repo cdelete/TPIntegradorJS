@@ -17,34 +17,48 @@
 <body>
     <!-- barra navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Conf Bs As</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">La Conferencia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Oradores</a>
-              </li>
-              
-            </ul>
+      <div class="container-fluid d-flex">
+          <div>
+              <a class="navbar-brand text-light" href="#">Conf Bs As</a>
           </div>
-        </div>
-    </nav>
-
+          <div class="justify-content-end">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link active text-light" aria-current="page" href="#">La Conferencia</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="#">Los oradores</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="#">Lugar y fecha</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="#">Conviértete en orador</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-success" href="#">Comprar Tickets</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+   
     <!-- categorías -->
     <div class="d-flex justify-content-center">
         <div class="card my-3 mx-1">
-            <div class="card-header">
+            <div class="card-header" align="center">
               Estudiante
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>Tiene un descuento del 80%</p>
+                <p>Tiene un descuento</p>
+                <p align="center">80%</p>
                 <div class="textoGris">
                     * Presentar documentación
                 </div>
@@ -52,12 +66,13 @@
             </div>
         </div> 
         <div class="card my-3 mx-1">
-            <div class="card-header">
+            <div class="card-header" align="center">
               Trainee
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>Tiene un descuento del 50%</p>
+                <p>Tiene un descuento</p>
+                <p align="center">50%</p>
                 <div class="textoGris">
                     * Presentar documentación
                 </div>
@@ -65,12 +80,13 @@
             </div>
         </div> 
         <div class="card my-3 mx-1">
-            <div class="card-header">
+            <div class="card-header" align="center">
               Junior
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
-                <p>Tiene un descuento del 15%</p>
+                <p>Tiene un descuento</p>
+                <p align="center">15%</p>
                 <div class="textoGris">
                     * Presentar documentación
                 </div>
@@ -81,6 +97,7 @@
 
     <!-- Formulario -->
     <div class="container">
+        <p align="center">VENTA</p>
         <div class="lead text-center my-3">Valor del Ticket $200</div>
 
         <form action="contacto/mostrarVariablesSubmit.html" method="post">
@@ -95,15 +112,17 @@
             </div>
             <div class="row">
                 <div class="col-md mb-3">
-                    <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
+                    <input type="email" name="email" id="email" placeholder="Correo" class="form-control">
                 </div>
             </div>
     
             <div class="row">
                 <div class="col-md mb-3">
+                    <p>Ingrese Cantidad</p>
                     <input type="text" name="cant" id="cant" placeholder="Cantidad" class="form-control" onkeyup="calcularTotal()">
                 </div>
                 <div class="col-md mb-3">
+                    <p>Seleccione Categoría</p>
                     <select class="form-select" aria-label="Default select example" id="categoria" onchange="calcularTotal()">
                         <option value="1" selected>Estudiante</option>
                         <option value="2">Trainee</option>
@@ -120,20 +139,18 @@
 
             <div class="row">
                 <div class="col-md mb-3">
-                    <input type="reset" value="Limpiar" class="btn btn-primary">
+                    <input type="reset" value="Limpiar" class="btn btn-success">
                 </div>
                 <div class="col-md mb-3">
-                    <input type="button" value="Calcular" onclick="calcularTotal()" class="btn btn-primary">
+                    <input type="button" value="Calcular" onclick="calcularTotal()" class="btn btn-success">
                 </div>
                 <div class="col-md mb-3">
-                    <input type="submit" value="Enviar" class="btn btn-primary">
+                    <input type="submit" value="Enviar" class="btn btn-success">
                 </div>
             </div>
 
         </form>
     </div>
-
-
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
